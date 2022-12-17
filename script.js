@@ -75,27 +75,20 @@ window.addEventListener('load', () => {
             console.log(data['articles'][key])
             const card = document.createElement('div');
             card.classList = 'card-body';
-          
+ 
             // Construct card content
             const content = `
               <div class="card">
-              <div class="card-header" id="heading-${key}">
-                <h5 class="mb-0">
-                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-${key}" aria-expanded="true" aria-controls="collapse-${key}">
-          
-                          </button>
-                </h5>
-              </div>
-          
-              <div id="collapse-${key}" class="collapse show" aria-labelledby="heading-${key}" data-parent="#accordion">
-                <div class="card-body">
-          
-                  <h5>${data['articles'][key]['title']}</h5>
-                  <p>${data['articles'][key]['description']}</p>
-                  ...
+                <div class="card-image-container">
+                  <img src=${data['articles'][key]['urlToImage']} class="card-image" alt="photo">
+                </div>
+                <div class="card-details" id="heading-${key}">
+                  <div class="card-title">${data['articles'][key]['title']}</div>
+                  <div class="card-info">
+                    <p>${data['articles'][key]['description']}</p>
+                  </div>
                 </div>
               </div>
-            </div>
             `;
           
             // Append newyly created card element to the container
