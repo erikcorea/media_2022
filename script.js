@@ -35,6 +35,7 @@ window.addEventListener('load', () => {
           const place = data.name;
           const { description, icon } = data.weather[0];
           const { sunrise, sunset } = data.sys;
+          console.log('temp:', temp)
 
           const iconUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
           const fahrenheit = (temp * 9) / 5 + 32;
@@ -46,8 +47,8 @@ window.addEventListener('load', () => {
           // Interacting with DOM to show data
           iconImg.src = iconUrl;
           loc.textContent = `${place}`;
-          desc.textContent = `${description}`;
-          tempC.textContent = `${temp.toFixed(2)} °C`;
+          // desc.textContent = `${description}`;
+          // tempC.textContent = `${temp.toFixed(2)} °C`;
           tempF.textContent = `${fahrenheit.toFixed(2)} °F`;
           sunriseDOM.textContent = `${sunriseGMT.toLocaleTimeString()}`;
           sunsetDOM.textContent = `${sunsetGMT.toLocaleTimeString()}`;

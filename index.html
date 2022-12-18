@@ -16,45 +16,46 @@
 
 <body>
     <header>
-        <nav>
-            <a href="#home" id="logo">Site Logo</a>
-            <i class="fas fa-bars" id="ham-menu"></i>
-            <ul id="nav-bar">
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-                <li>
-                    <a href="#about">About</a>
-                </li>
-                <li>
-                    <a href="#services">Services</a>
-                </li>
-                <li>
-                    <a href="#team">Team</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="nav-logo">
+            <a href="#home" id="logo">NEWS</a>
+        </div>
         <div class="container">
-            <img src="" alt="" srcset="" id="weather-icon">
-            <div id="location">Unable to Fetch Weather</div>
-            <div class="desc">No Information Available.</div>
+            <div class="weather-pair">
+                <img src="" alt="" srcset="" id="weather-icon">
+                <div id="location">Unable to Fetch Weather</div>
+            </div>
             <div class="weather">
-                <div class="c">Error</div>
                 <div class="circle"></div>
                 <div class="f">Error</div>
             </div>
-            <div class="info">
-                <h4>Sunrise: <span class="sunrise">No Information Available</span></h4>
-                <h4>Sunset: <span class="sunset">No Information Available</span></h4>
+        </div>
+        <nav>
+            <i class="fas fa-bars" id="ham-menu"></i>
+            <div class="nav-links">
+                <ul id="nav-bar">
+                    <li>
+                        <a href="#home">World</a>
+                    </li>
+                    <li>
+                        <a href="#about">Sports</a>
+                    </li>
+                    <li>
+                        <a href="#services">Health</a>
+                    </li>
+                    <li>
+                        <a href="#team">Politics</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Business</a>
+                    </li>
+                </ul>
             </div>
+        </nav>
         </div>
     </header>
 
     <div class="tn-tag">
-        <h1>Trending News:</h1>
+        <h3>Trending News:</h1>
     </div>
     
     <div class="news-container" id="news-container">
