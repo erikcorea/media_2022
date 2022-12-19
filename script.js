@@ -81,13 +81,10 @@ window.addEventListener('load', () => {
             const content = `
               <div class="card">
                 <div class="card-image-container">
-                  <img src=${data['articles'][key]['urlToImage']} class="card-image" alt="photo">
+                  <a href="${data['articles'][key]['url']}"><img src=${data['articles'][key]['urlToImage']} class="card-image" alt="photo"></a>
                 </div>
                 <div class="card-details" id="heading-${key}">
                   <div class="card-title">${data['articles'][key]['title']}</div>
-                  <div class="card-info">
-                    <p>${data['articles'][key]['description']}</p>
-                  </div>
                 </div>
               </div>
             `;
@@ -98,20 +95,4 @@ window.addEventListener('load', () => {
         });
     });
   }
-});
-
-//Navbar
-let hamMenuIcon = document.getElementById("ham-menu");
-let navBar = document.getElementById("nav-bar");
-let navLinks = navBar.querySelectorAll("li");
-
-hamMenuIcon.addEventListener("click", () => {
-  navBar.classList.toggle("active");
-  hamMenuIcon.classList.toggle("fa-times");
-});
-navLinks.forEach((navLinks) => {
-  navLinks.addEventListener("click", () => {
-    navBar.classList.remove("active");
-    hamMenuIcon.classList.toggle("fa-times");
-  });
 });
